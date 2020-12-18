@@ -26,9 +26,9 @@
 </head>
 <body style="text-align: center;">
 	<header>
-			<c:import url="WEB-INF/header.jsp"></c:import>
+			<c:import url="/WEB-INF/header.jsp"></c:import>
 	</header>
-	<form action="login" name="login" method="get" id="login-form">
+	<form action="login" name="login" method="post" id="login-form">
 		
 		<div>
 			<input class="logincss" type="text" name="input_mem_id" placeholder=" 아이디를 입력하세요." autofocus><br> 
@@ -41,14 +41,14 @@
 	</form>
 	<br>
 	<div style="margin: -5px">
-		<form action="signupform.jsp" method="post">
+		<form action="user?a=signUpForm" method="post">
 			<input class="loginbutton" type="submit" value="회원가입">
 		</form>
 	</div>
 	
-	<c:if test="${vo != null }">
+	<c:if test="${pram.vo != null }">
 		<script>alert("비밀번호가 일치하지 않습니다.")	
-	location.href = "/WEB-INF/view/board/login.jsp"
+	location.href = "user?a=loginForm"
 	
 	
 	</script>

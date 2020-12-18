@@ -40,7 +40,7 @@ public class SignupController extends HttpServlet {
 		else {
 				request.setAttribute("vo1", vo);
 			
-				request.getRequestDispatcher("/WEB-INF/view/board/signUp.jsp").forward(request, response);
+				request.getRequestDispatcher("/WEB-INF/view/user/signUpForm.jsp").forward(request, response);
 
 	}
 

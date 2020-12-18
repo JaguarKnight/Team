@@ -11,9 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import project.BoardDAO;
 import project.BoardVO;
 
-/**
- * Servlet implementation class getBoard
- */
+
 @WebServlet("/getBoard")
 public class GetBoardController extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)

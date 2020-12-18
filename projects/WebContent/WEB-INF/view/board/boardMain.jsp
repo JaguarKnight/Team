@@ -68,7 +68,7 @@
 							<tr>
 
 								<td>${n.b_no}</td>
-								<td>${n.b_title}</td>
+								<td>${n.mem_name}</td>
 								<td><a href="getBoard?no=${n.b_no}">${n.b_title}</a></td>
 								<td>${n.b_date}</td>
 								<td>${n.b_view}</td>
@@ -94,7 +94,7 @@
 			<div class="col-md-12" style="text-align: right;">
 
 
-				<input type="button" value="글쓰기" onclick="Insertform();" id="write"
+				<input type="button" value="글쓰기" onclick="Insertform()" id="write"
 					style="width: 5%">
 
 			</div>
@@ -112,16 +112,16 @@
 </html>
 <script>
 function Insertform() {
-	var Userid = '<%=(String) session.getAttribute("Userid")%>
-	';
-		if (Userid == "null") {
-			alert("로그인 후 이용가능합니다.");
-			location.href = '/WEB-INF/view/board/login.jsp';
-		}
-
-		else {
-
-			location.href = 'InsertForm.jsp';
-		}
+	var Userid = '<%=(String)session.getAttribute("Userid") %>';
+	 if(Userid == "null" ) {
+		 alert("로그인 후 이용가능합니다.");
+	location.href = '/user?a=loginForm';
+	 }
+	 
+	 else {
+		
+		 location.href = 'board?a=insertBoardForm';
+	 }
 	}
+
 </script>

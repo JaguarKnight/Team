@@ -18,7 +18,8 @@ import project.MemberVO;
 @WebServlet("/login")
 public class loginController extends HttpServlet {
 
-	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 
 		request.setCharacterEncoding("UTF-8");
 		
@@ -33,9 +34,11 @@ public class loginController extends HttpServlet {
 
 		if(vo == null) {
 			// 아닐시 비번없다뜨는거?
+			System.out.println("체크");
+
 			request.setAttribute("vo", vo);
 			
-			request.getRequestDispatcher("/WEB-INF/view/board/login.jsp").forward(request, response);
+			request.getRequestDispatcher("/WEB-INF/view/user/loginForm.jsp").forward(request, response);
 
 		}
 		/* 세션에 저장 */
@@ -49,10 +52,10 @@ public class loginController extends HttpServlet {
 			
 			/*로그인 시 메인화면으로 이동 */
 
-			request.getRequestDispatcher("Main.jsp").forward(request, response);
+			request.getRequestDispatcher("/Main.jsp").forward(request, response);
 			}
-			
+		}
+
 
 
 	}
-}

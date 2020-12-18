@@ -65,8 +65,8 @@
 								<c:choose>
 									<c:when test="${Userid == null }">
 										<!-- 로그인 전 -->
-										<li><a href="login">로그인</a></li>
-										<li><a href="signUp">회원가입</a></li>
+										<li><a href="user?a=loginForm">로그인</a></li>
+										<li><a href="user?a=signUpForm">회원가입</a></li>
 										<li><a href="boardMain">자유게시판</a></li>
 									</c:when>
 									<c:otherwise>
