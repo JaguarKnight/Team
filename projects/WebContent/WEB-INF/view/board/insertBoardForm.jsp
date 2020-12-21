@@ -16,13 +16,13 @@
 <!DOCTYPE html>
 <html lang="ko">
 <style>
-@import url("css/recs.css");
+@import url("/css/recs.css");
 </style>
 
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="css/style.css" type="text/css">
+<link rel="stylesheet" href="/css/style.css" type="/text/css">
 <!-- ##### All Javascript Script ##### -->
 <!-- jQuery-2.2.4 js -->
 <script src="js/jquery/jquery-2.2.4.min.js"></script>
@@ -85,19 +85,17 @@
 
 						</tbody>
 
-				
+
 					</table>
-						<input type="submit" value="완료">
-					</form>
+					<input type="submit" value="완료">
+				</form>
 			</div>
 
 
 		</div>
 
-		<div style="text-align: right;">
-			
-		</div>
-		
+		<div style="text-align: right;"></div>
+
 	</div>
 
 	<div class="footer text-center" style="margin-top: auto">
@@ -108,6 +106,3 @@
 </body>
 
 </html>
-<script>
-
-</script>

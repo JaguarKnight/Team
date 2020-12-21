@@ -13,7 +13,15 @@ import project.BoardDAO;
 @WebServlet("/boardUpdate")
 public class BoardUpdateController extends HttpServlet {
 
-	protected void service(HttpServletRequest request, HttpServletResponse response)
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		request.setCharacterEncoding("UTF-8");
+
+		request.getRequestDispatcher("/WEB-INF/view/board/boardUpdateForm.jsp").forward(request, response);
+
+	}
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
 		String update_title = request.getParameter("update_title");
@@ -25,7 +33,8 @@ public class BoardUpdateController extends HttpServlet {
 		BoardDAO dao = new BoardDAO();
 		dao.update(no, update_title, update_content);
 
-		response.sendRedirect("/BoardMain");
+		response.sendRedirect("/boardMain");
+
 	}
 
 }

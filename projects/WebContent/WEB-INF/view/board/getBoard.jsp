@@ -91,12 +91,12 @@
 					<c:choose>
 						<c:when test="${Usercode == null}">
 							<input type="button" value="로그인"
-								onclick="location.href='/user?a=loginForm'" style="width: 5%">
+								onclick="location.href='/login'" style="width: 5%">
 						</c:when>
 
 						<c:when test="${Usercode == vo.mem_code}">
 							
-							<a href="board?a=boardUpdate&no=${no}"> <input type="button"
+							<a href="boardUpdate?no=${no}"> <input type="button"
 								value="수정하기" style="width: 8%">
 							</a>
 							<a href="boardDelete?no=${no}"> <input type="button"
@@ -133,12 +133,12 @@ function Insertform() {
 	';
 		if (Userid == "null") {
 			alert("로그인 후 이용가능합니다.");
-			location.href = '/user?a=loginForm';
+			location.href = '/login';
 		}
 
 		else {
 
-			location.href = '/board?a=insertBoardForm';
+			location.href = '/insertBoard';
 		}
 	}
 </script>

@@ -31,6 +31,7 @@ public class BoardDeleteController extends HttpServlet {
 
 			// 포워드 처리
 			request.getRequestDispatcher("/WEB-INF/view/board/boardMain.jsp").forward(request, response);
+
 		} else if (usercode == null)
 			response.sendRedirect("/WEB-INF/view/board/login.jsp");
 	}

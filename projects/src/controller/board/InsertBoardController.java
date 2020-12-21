@@ -16,6 +16,14 @@ import project.BoardVO;
 @WebServlet("/insertBoard")
 public class InsertBoardController extends HttpServlet {
 	
+	@Override
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
+		request.getRequestDispatcher("/WEB-INF/view/board/insertBoardForm.jsp").forward(request, response);
+
+	}
+
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
@@ -32,7 +40,7 @@ public class InsertBoardController extends HttpServlet {
 		dao.insert(vo);
 
 
-		response.sendRedirect("/boardMain");
+		request.getRequestDispatcher("/WEB-INF/view/board/boardMain.jsp").forward(request, response);
 	}
 
 }

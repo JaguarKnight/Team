@@ -21,7 +21,7 @@ public class logout extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 		HttpSession session = request.getSession();
 		session.invalidate();
-		response.sendRedirect("Main.jsp");
+		response.sendRedirect("/main");
 	}
 
 }

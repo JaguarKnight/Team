@@ -46,7 +46,7 @@
 		</form>
 	</div>
 	
-	<c:if test="${pram.vo != null }">
+	<c:if test="${vo != null }">
 		<script>alert("비밀번호가 일치하지 않습니다.")	
 	location.href = "user?a=loginForm"
 	
