@@ -32,21 +32,20 @@
 	</header>
 	<c:choose>
 		<c:when test="${Userid == null }">
-	<%response.sendRedirect("loginform.jsp"); %>
+	<%response.sendRedirect("/login"); %>
 	
 	</c:when>
 	
 	<c:otherwise>
 	
-	<form action="delete" name="loginform" method="get" id="login-form">
+	<form action="delete" method="post" id="login-form">
 <h5> 회원 탈퇴</h5>
 		<div>
 			<input class="logincss" type="text" name="input_mem_id" value ="${Userid}" readonly><br> 
 				<input class="logincss" type="password" name="input_mem_pwd"
 				placeholder=" 비밀번호를 입력하세요." autofocus><br>
-					<input class="logincss" type="hidden" name="virtual1"><br>
-				 <input type="hidden"
-				name="a" value="delete" />
+					<input type="hidden" name="mem_code" value ="${Usercode}"><br>
+				 <input type="hidden"name="a" value="delete" />
 		</div>
 
 

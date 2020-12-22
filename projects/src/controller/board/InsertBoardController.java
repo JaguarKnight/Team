@@ -40,7 +40,7 @@ public class InsertBoardController extends HttpServlet {
 		dao.insert(vo);
 
 
-		request.getRequestDispatcher("/WEB-INF/view/board/boardMain.jsp").forward(request, response);
+		response.sendRedirect("/boardMain");
 	}
 
 }
